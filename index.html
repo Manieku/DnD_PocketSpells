@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My D&D Spell App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .app-header {
+            background: #8B4513;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .spell-card {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-header">
+        <h1>🎲 My D&D Spell Manager</h1>
+        <p>Welcome to your spell tracking app!</p>
+    </div>
+
+    <div class="spell-card">
+        <h3>Magic Missile</h3>
+        <p><strong>Level 1 Evocation</strong></p>
+        <p>You create three glowing darts of magical force...</p>
+        <button>Prepare Spell</button>
+    </div>
+
+    <div class="spell-card">
+        <h3>Fireball</h3>
+        <p><strong>Level 3 Evocation</strong></p>
+        <p>A bright streak flashes from your pointing finger...</p>
+        <button>Prepare Spell</button>
+    </div>
+
+    <script>
+        // Simple JavaScript for button clicks
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent === 'Prepare Spell') {
+                    this.textContent = 'Prepared!';
+                    this.style.background = '#4CAF50';
+                    this.style.color = 'white';
+                } else {
+                    this.textContent = 'Prepare Spell';
+                    this.style.background = '';
+                    this.style.color = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
