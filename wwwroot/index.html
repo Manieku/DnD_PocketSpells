@@ -2,25 +2,20 @@
 <html lang="en">
 
 <head>
+    <script>
+        // Extreme early base href setting
+        const isGitHubPages = window.location.hostname === 'manieku.github.io';
+        document.write('<base href="' + (isGitHubPages ? '/DnD_PocketSpells/' : '/') + '" />');
+    </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DnD_PocketSpellsBlazor</title>
-    <base href="/" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="DnD_PocketSpells.styles.css" rel="stylesheet" />
-    <script>
-        // Dynamic base href for GitHub Pages
-        (function () {
-            const segments = window.location.pathname.split('/');
-            if (segments[1] === 'DnD_PocketSpells') {
-                document.querySelector('base').href = '/DnD_PocketSpells/';
-            }
-        })();
-    </script>
 </head>
-
 <body>
     <div id="app">
         <svg class="loading-progress">
